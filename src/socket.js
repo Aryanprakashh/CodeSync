@@ -10,6 +10,6 @@ export const initSocket = async () => {
 
   const backendUrl =
     process.env.REACT_APP_BACKEND_URL ||
-    "https://your-vercel-app-url.vercel.app";
+    "https://co-editor-project.vercel.app/";
   return io(backendUrl, options);
 };
