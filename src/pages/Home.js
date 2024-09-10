@@ -20,7 +20,11 @@ const Home = () => {
   // Function to join a room
   const joinRoom = () => {
     if (!roomId || !username) {
-      toast.error("ROOM ID & username is required");
+      if (!roomId) {
+        toast.error("ROOM ID is required");
+      } else if (!username) {
+        toast.error("Username is required");
+      }
       return;
     }
 
